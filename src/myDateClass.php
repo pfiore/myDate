@@ -20,6 +20,13 @@
             $this->MM = (int) $new_month;
         }
 
+        function getDay() {
+            return $this->DD;
+        }
+
+        function setDay($new_day) {
+            $this->DD = (int) $new_day;
+        }
 
     }
 
