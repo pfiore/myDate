@@ -28,6 +28,13 @@
             $this->DD = (int) $new_day;
         }
 
+        function getYear() {
+            return $this->YYYY;
+        }
+
+        function setYear($new_year) {
+            $this->YYYY = (int) $new_year;
+        }
     }
 
 

@@ -65,5 +65,36 @@
             $this->assertEquals(03, $result);
         }
 
+        function test_getYear()
+        {
+            //ARRANGE
+            $MM = 08;
+            $DD = 02;
+            $YYYY = 1986;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //ACT
+            $result = $test_date->getYear();
+
+            //Assert
+            $this->assertEquals(1986, $result);
+        }
+
+        function test_setYear()
+        {
+            //ARRANGE
+            $MM = 08;
+            $DD = 02;
+            $YYYY = 1986;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //ACT
+            $test_date->setYear(1988);
+            $result = $test_date->getYear();
+
+            //Assert
+            $this->assertEquals(1988, $result);
+        }
+
     }
 ?>
