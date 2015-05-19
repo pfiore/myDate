@@ -16,6 +16,10 @@
             return $this->MM;
         }
 
+        function setMonth($new_month) {
+            $this->MM = (int) $new_month;
+        }
+
 
     }
 
