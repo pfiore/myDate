@@ -111,20 +111,20 @@
             $this->assertEquals("1986-08-02", $result);
         }
 
-        // function test_prettyDate_1()
-        // {
-        //     //ARRANGE
-        //     $MM = 08;
-        //     $DD = 02;
-        //     $YYYY = 1986;
-        //     $test_date = new myDateClass($MM, $DD, $YYYY);
-        //
-        //     //ACT
-        //     $result = $test_date->prettyDate(1);
-        //
-        //     //ASSERT
-        //     $this->assertEquals('08/02/1986', $result);
-        // }
+        function test_prettyDate_1()
+        {
+            //ARRANGE
+            $MM = 08;
+            $DD = 02;
+            $YYYY = 1986;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //ACT
+            $result = $test_date->prettyDate(1);
+
+            //ASSERT
+            $this->assertEquals('08/02/1986', $result);
+        }
 
     }
 ?>

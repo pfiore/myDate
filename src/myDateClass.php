@@ -50,11 +50,10 @@
             if ($num == 0) {
                 return  $new_date = date('Y-m-d', strtotime($dateString));
 
-                // $converted_date = date("Y-m-d", strtotime($given_date));
             }
-            // elseif ($num == 1) {
-            //     return $converted_date = date("m/d/Y", strtotime($given_date));
-            // }
+            elseif ($num == 1) {
+                return $converted_date = date("m/d/Y", strtotime($given_date));
+            }
 
         }
 
