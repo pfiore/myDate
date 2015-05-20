@@ -14,7 +14,7 @@
             //ACT
             $result = $test_date->getMonth();
 
-            //Assert
+            //ASSERT
             $this->assertEquals(08, $result);
         }
 
@@ -30,7 +30,7 @@
             $test_date->setMonth(07);
             $result = $test_date->getMonth();
 
-            //Assert
+            //ASSERT
             $this->assertEquals(07, $result);
         }
 
@@ -45,7 +45,7 @@
             //ACT
             $result = $test_date->getDay();
 
-            //Assert
+            //ASSERT
             $this->assertEquals(02, $result);
         }
 
@@ -61,7 +61,7 @@
             $test_date->setDay(03);
             $result = $test_date->getDay();
 
-            //Assert
+            //ASSERT
             $this->assertEquals(03, $result);
         }
 
@@ -76,7 +76,7 @@
             //ACT
             $result = $test_date->getYear();
 
-            //Assert
+            //ASSERT
             $this->assertEquals(1986, $result);
         }
 
@@ -92,9 +92,39 @@
             $test_date->setYear(1988);
             $result = $test_date->getYear();
 
-            //Assert
+            //ASSERT
             $this->assertEquals(1988, $result);
         }
+
+        function test_prettyDate_0()
+        {
+            //ARRANGE
+            $MM = 2;
+            $DD = 8;
+            $YYYY = 1986;
+            $test_date = new myDateClass($DD, $MM, $YYYY);
+
+            //ACT
+            $result = $test_date->prettyDate(0);
+
+            //ASSERT
+            $this->assertEquals("1986-08-02", $result);
+        }
+
+        // function test_prettyDate_1()
+        // {
+        //     //ARRANGE
+        //     $MM = 08;
+        //     $DD = 02;
+        //     $YYYY = 1986;
+        //     $test_date = new myDateClass($MM, $DD, $YYYY);
+        //
+        //     //ACT
+        //     $result = $test_date->prettyDate(1);
+        //
+        //     //ASSERT
+        //     $this->assertEquals('08/02/1986', $result);
+        // }
 
     }
 ?>

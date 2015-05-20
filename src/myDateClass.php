@@ -5,6 +5,8 @@
         public $DD;
         public $YYYY;
 
+
+
         function __construct($MM, $DD, $YYYY) {
 
             $this->MM = $MM;
@@ -35,15 +37,37 @@
         function setYear($new_year) {
             $this->YYYY = (int) $new_year;
         }
+
+        function prettyDate($num) {
+
+            $MM = $this->getMonth();
+            $DD = $this->getDay();
+            $YYYY = $this->getYear();
+            $dateString = $YYYY . '-' . $MM . '-' . $DD;
+
+            date_default_timezone_set('America/Los_Angeles');
+
+            if ($num == 0) {
+                return  $new_date = date('Y-m-d', strtotime($dateString));
+
+                // $converted_date = date("Y-m-d", strtotime($given_date));
+            }
+            // elseif ($num == 1) {
+            //     return $converted_date = date("m/d/Y", strtotime($given_date));
+            // }
+
+        }
+
+
+
+        //
+        // function today() {
+        //     $todays_date = date("Y-m-d");
+        // }
+
+
+
+
     }
-
-
-
-
-
-
-
-
-
 
 ?>
