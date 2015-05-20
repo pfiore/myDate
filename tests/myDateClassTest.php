@@ -99,10 +99,10 @@
         function test_prettyDate_0()
         {
             //ARRANGE
-            $MM = 2;
-            $DD = 8;
+            $MM = 8;
+            $DD = 2;
             $YYYY = 1986;
-            $test_date = new myDateClass($DD, $MM, $YYYY);
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //ACT
             $result = $test_date->prettyDate(0);
@@ -114,8 +114,8 @@
         function test_prettyDate_1()
         {
             //ARRANGE
-            $MM = 08;
-            $DD = 02;
+            $MM = 8;
+            $DD = 2;
             $YYYY = 1986;
             $test_date = new myDateClass($MM, $DD, $YYYY);
 
@@ -126,5 +126,34 @@
             $this->assertEquals('08/02/1986', $result);
         }
 
+        function test_prettyDate_2()
+        {
+            //ARRANGE
+            $MM = 8;
+            $DD = 2;
+            $YYYY = 1986;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //ACT
+            $result = $test_date->prettyDate(2);
+
+            //ASSERT
+            $this->assertEquals('August 2nd, 1986', $result);
+        }
+
+        function test_prettyDate_3()
+        {
+            //ARRANGE
+            $MM = 8;
+            $DD = 2;
+            $YYYY = 1986;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //ACT
+            $result = $test_date->prettyDate(3);
+
+            //ASSERT
+            $this->assertEquals('The 2nd day of the month August, in the year 1986', $result);
+        }
     }
 ?>

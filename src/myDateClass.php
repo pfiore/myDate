@@ -51,8 +51,24 @@
                 return  $new_date = date('Y-m-d', strtotime($dateString));
 
             }
+
             elseif ($num == 1) {
-                return $converted_date = date("m/d/Y", strtotime($given_date));
+                return  $new_date = date('m/d/Y', strtotime($dateString));
+
+            }
+
+            elseif ($num == 2) {
+                return  $new_date = date('F jS, Y', strtotime($dateString));//Wasn't sure if you wanted "day" to be represented by 2, 2nd, or second.
+
+            }
+
+            elseif ($num == 3) {
+                return  $new_date = date('\T\h\e jS \d\a\y \o\f \t\h\e \m\o\n\t\h F, \i\n \t\h\e \y\e\a\r Y', strtotime($dateString));
+
+            }
+
+            else {
+                return "ERROR, invalid variable.";
             }
 
         }
