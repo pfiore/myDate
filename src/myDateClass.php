@@ -75,10 +75,10 @@
 
 
 
-        //
-        // function today() {
-        //     $todays_date = date("Y-m-d");
-        // }
+
+        static function today() {
+            return (date("Y-m-d"));
+        }
 
 
 

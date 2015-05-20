@@ -155,5 +155,31 @@
             //ASSERT
             $this->assertEquals('The 2nd day of the month August, in the year 1986', $result);
         }
+
+        function test_prettyDate_4()
+        {
+            //ARRANGE
+            $MM = 8;
+            $DD = 2;
+            $YYYY = 1986;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //ACT
+            $result = $test_date->prettyDate(4);
+
+            //ASSERT
+            $this->assertEquals('ERROR, invalid variable.', $result);
+        }
+
+        function test_today()
+        {
+            //ARRANGE
+
+            //ACT
+            $result = myDateClass::today();
+
+            //ASSERT
+            $this->assertEquals(date("Y-m-d"),$result);
+        }
     }
 ?>
